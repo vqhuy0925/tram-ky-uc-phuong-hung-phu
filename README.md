@@ -38,13 +38,13 @@
 
 | STT | Họ và Tên | Năm sinh - mất | Danh hiệu | Thân nhân Liệt sĩ | Địa chỉ thờ cúng / Phụng dưỡng |
 |:---:|:---|:---:|:---:|:---|:---|
-| 1 | **VÕ THỊ BA** | 1916 - 2003 | Truy tặng | LS Phạm Văn Dài (con), LS Phạm Văn Chính (con) | Phường Phú Thứ, Thành phố Cần Thơ |
-| 2 | **NGÔ THỊ CHÈ** | 1910 - 2001 | Truy tặng | LS Lê Văn Hoanh (chồng), LS Lê Văn Xứng (con) | Phường Phú Thứ, Thành phố Cần Thơ |
-| 3 | **MAI THỊ CHỮ** | 1917 - 1990 | Truy tặng | LS Trương Văn Tư (chồng), LS Trương Văn Gấm (con) | Phường Phú Thứ, Thành phố Cần Thơ |
-| 4 | **LÊ THỊ CHÍNH** | 1925 - 2014 | Phong tặng | LS Nguyễn Văn Xệ (con), LS Nguyễn Văn Săn (con) | Phường Tân Phú, Thành phố Cần Thơ |
-| 5 | **NGUYỄN THỊ BẢY** | 1899 - 1991 | Truy tặng | LS Trần Văn Giáp (chồng), LS Trần Văn Đen (con) | Phường Phú Thứ, Thành phố Cần Thơ |
-| 6 | **LÊ THỊ BA** | 1922 - từ trần | Truy tặng | LS Nguyễn Thành Long (con), LS Nguyễn Văn Đen (con) | Phường Tân Phú, Thành phố Cần Thơ |
-| 7 | **NGUYỄN THỊ BÊ** | 1935 | Phong tặng | LS Võ Văn Điệu (chồng), LS Võ Văn Lâm (con) | **Đang phụng dưỡng**: Phường Phú Thứ, Thành phố Cần Thơ *(Có ảnh chân dung)* |
+| 1 | **VÕ THỊ BA** | 1916 - 2003 | Truy tặng | LS Phạm Văn Dài (con), LS Phạm Văn Chính (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 2 | **NGÔ THỊ CHÈ** | 1910 - 2001 | Truy tặng | LS Lê Văn Hoanh (chồng), LS Lê Văn Xứng (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 3 | **MAI THỊ CHỮ** | 1917 - 1990 | Truy tặng | LS Trương Văn Tư (chồng), LS Trương Văn Gấm (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 4 | **LÊ THỊ CHÍNH** | 1925 - 2014 | Phong tặng | LS Nguyễn Văn Xệ (con), LS Nguyễn Văn Săn (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 5 | **NGUYỄN THỊ BẢY** | 1899 - 1991 | Truy tặng | LS Trần Văn Giáp (chồng), LS Trần Văn Đen (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 6 | **LÊ THỊ BA** | 1922 - từ trần | Truy tặng | LS Nguyễn Thành Long (con), LS Nguyễn Văn Đen (con) | Phường Hưng Phú, Thành phố Cần Thơ |
+| 7 | **NGUYỄN THỊ BÊ** | 1935 | Phong tặng | LS Võ Văn Điệu (chồng), LS Võ Văn Lâm (con) | **Đang phụng dưỡng**: Phường Hưng Phú, Thành phố Cần Thơ *(Có ảnh chân dung)* |
 
 ---
 

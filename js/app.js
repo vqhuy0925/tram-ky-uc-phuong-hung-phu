@@ -104,11 +104,14 @@ function initAltarInteractions() {
       candleCountElem.textContent = Number(newCount).toLocaleString("vi-VN");
     }
 
-    // 3. Hiệu ứng phát sáng bàn thờ
+    // 3. Hiệu ứng phát sáng bàn thờ & vầng sáng đài sen
+    const heroSection = document.getElementById("hero");
     if (altarBox) {
       altarBox.classList.add("glowing");
+      if (heroSection) heroSection.classList.add("glowing-aura");
       setTimeout(() => {
         altarBox.classList.remove("glowing");
+        if (heroSection) heroSection.classList.remove("glowing-aura");
       }, 1200);
     }
 
