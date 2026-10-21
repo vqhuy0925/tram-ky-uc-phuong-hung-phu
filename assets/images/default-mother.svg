@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D1217" />
+      <stop offset="100%" stop-color="#14080A" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="200" height="260" rx="8" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  
+  <!-- Outer decorative frame -->
+  <rect x="8" y="8" width="184" height="244" rx="4" fill="none" stroke="#D97706" stroke-width="0.75" stroke-dasharray="3,3" opacity="0.7"/>
+
+  <!-- Golden lotus emblem -->
+  <g transform="translate(100, 110) scale(0.9)">
+    <!-- Central petal -->
+    <path d="M0,-50 C-18,-25 -14,10 0,35 C14,10 18,-25 0,-50 Z" fill="url(#goldGrad)" opacity="0.95"/>
+    <!-- Left petal -->
+    <path d="M-8,-40 C-35,-20 -38,15 -10,32 C-20,10 -15,-15 -8,-40 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <!-- Right petal -->
+    <path d="M8,-40 C35,-20 38,15 10,32 C20,10 15,-15 8,-40 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <!-- Outer left petal -->
+    <path d="M-18,-20 C-50,-2 -45,28 -15,35 C-30,18 -28,2 -18,-20 Z" fill="url(#goldGrad)" opacity="0.7"/>
+    <!-- Outer right petal -->
+    <path d="M18,-20 C50,-2 45,28 15,35 C30,18 28,2 18,-20 Z" fill="url(#goldGrad)" opacity="0.7"/>
+    <!-- Lotus base / leaves -->
+    <path d="M-45,36 C-20,44 20,44 45,36 C35,46 -35,46 -45,36 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  </g>
+
+  <!-- Star of Honor -->
+  <g transform="translate(100, 42) scale(0.6)">
+    <polygon points="0,-18 5,-5 18,-5 8,4 12,18 0,9 -12,18 -8,4 -18,-5 -5,-5" fill="#FBBF24"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="100" y="185" text-anchor="middle" fill="#FDE68A" font-family="'Cinzel', 'Playfair Display', serif" font-size="12" font-weight="700" letter-spacing="1">MẸ VIỆT NAM</text>
+  <text x="100" y="202" text-anchor="middle" fill="#FBBF24" font-family="'Cinzel', 'Playfair Display', serif" font-size="13" font-weight="800" letter-spacing="2">ANH HÙNG</text>
+  <text x="100" y="222" text-anchor="middle" fill="#E2E8F0" font-family="'Be Vietnam Pro', sans-serif" font-size="9" opacity="0.75">Đang tiếp tục cập nhật ảnh</text>
+</svg>

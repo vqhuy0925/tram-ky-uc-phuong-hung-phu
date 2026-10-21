@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="30%" stop-color="#D97706"/>
+      <stop offset="70%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="50%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <radialGradient id="ashGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#57534E"/>
+      <stop offset="70%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#1C1917"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Tripod Legs -->
+  <path d="M50,115 C45,135 30,150 20,155 C35,150 55,135 60,118 Z" fill="url(#bronzeGrad)"/>
+  <path d="M150,115 C155,135 170,150 180,155 C165,150 145,135 140,118 Z" fill="url(#bronzeGrad)"/>
+  <path d="M92,125 C95,145 98,155 100,158 C102,155 105,145 108,125 Z" fill="#78350F"/>
+
+  <!-- Urn Body (Main Bowl) -->
+  <ellipse cx="100" cy="100" rx="65" ry="32" fill="url(#bronzeGrad)"/>
+  
+  <!-- Decorative Band / Ancient pattern -->
+  <path d="M42,95 Q100,110 158,95 Q100,105 42,95" fill="none" stroke="#FDE68A" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="102" r="5" fill="#FDE68A" opacity="0.8"/>
+  <circle cx="80" cy="101" r="3.5" fill="#FDE68A" opacity="0.6"/>
+  <circle cx="120" cy="101" r="3.5" fill="#FDE68A" opacity="0.6"/>
+
+  <!-- Handles (Tai Lư Rồng / Mây) -->
+  <path d="M38,82 C15,75 10,95 28,105 C35,100 37,92 40,88 Z" fill="url(#bronzeGrad)"/>
+  <path d="M162,82 C185,75 190,95 172,105 C165,100 163,92 160,88 Z" fill="url(#bronzeGrad)"/>
+
+  <!-- Rim Top -->
+  <ellipse cx="100" cy="75" rx="55" ry="16" fill="url(#goldRim)"/>
+  <!-- Ash Inside Bowl -->
+  <ellipse cx="100" cy="75" rx="49" ry="12" fill="url(#ashGrad)"/>
+</svg>
