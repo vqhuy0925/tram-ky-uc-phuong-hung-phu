@@ -4,7 +4,7 @@
 > Lưu giữ muôn đời hình ảnh, công trạng và lòng biết ơn sâu sắc của thế hệ hôm nay đối với các **Bà mẹ Việt Nam Anh hùng (VNAH)** quê hương Phường Hưng Phú, Thành phố Cần Thơ.
 > 
 > 🏛️ **Địa giới hành chính**: Chuẩn hóa theo mô hình chính quyền 2 cấp của Thành phố Cần Thơ (Thành phố -> Phường/Xã, lược bỏ cấp quận).  
-> ✉️ **Hòm thư tiếp nhận đóng góp tư liệu & hình ảnh:** [doanphuonghungphu@gmail.com](mailto:doanphuonghungphu@gmail.com)
+> ✉️ **Hòm thư tiếp nhận đóng góp tư liệu & hình ảnh:** [doanphuonghungphu01072025@gmail.com](mailto:doanphuonghungphu01072025@gmail.com)
 
 ---
 
