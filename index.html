@@ -9,20 +9,24 @@
   <meta property="og:title" content="Trạm Ký Ức - Mẹ Việt Nam Anh Hùng Phường Hưng Phú" />
   <meta property="og:description" content="Không gian số hóa tri ân và lưu giữ hình ảnh, công trạng các Bà mẹ Việt Nam Anh hùng quê hương Phường Hưng Phú, Thành phố Cần Thơ." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo-doan.webp" />
 
   <!-- Favicon Đoàn Thanh Niên -->
   <link rel="icon" type="image/webp" href="assets/images/logo-doan.webp" />
   <link rel="apple-touch-icon" href="assets/images/logo-doan.webp" />
 
-  <!-- Google Fonts: Editorial Serif (Lora & Playfair) + Crisp Sans-serif (Be Vietnam Pro) -->
+  <!-- Google Fonts: Editorial Serif (Lora) + Crisp Sans-serif (Be Vietnam Pro) - No Italics, Max Weight 700 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- Accessible Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
 
   <!-- Audio Background Player -->
   <audio id="bgAudio" loop preload="auto">
@@ -48,8 +52,10 @@
       <div class="header-actions">
         <nav class="header-nav-links" aria-label="Điều hướng">
           <a href="#hero" class="nav-link">Dâng Hương</a>
+          <a href="#journey" class="nav-link">Hành Trình</a>
           <a href="#mothers" class="nav-link">Hồ Sơ Các Mẹ</a>
           <a href="#guestbook" class="nav-link">Sổ Lưu Bút</a>
+          <a href="#faq" class="nav-link">Hỏi Đáp</a>
         </nav>
 
         <button id="musicToggleBtn" class="music-toggle-btn" type="button" title="Bật/Tắt bài ca Huyền thoại Mẹ">
@@ -64,6 +70,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- ==========================================================================
        HERO BANNER: TRẠM KÝ ỨC
        ========================================================================== -->
@@ -120,12 +127,18 @@
           <span class="counter-label">Nén tâm hương đã thắp</span>
         </div>
 
-        <!-- Action Button -->
-        <div>
+        <!-- Action Button Group (Single Intent Primary CTA + Gentle Secondary Action) -->
+        <div class="hero-cta-group">
           <button id="lightCandleBtn" class="tribute-action-btn" type="button">
-            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
+            <!-- Phosphor Flame Icon -->
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+              <path d="M174.14,103.78A79.94,79.94,0,0,0,136,16a8,8,0,0,0-7.39,4.92,128.24,128.24,0,0,0-5.83,31.79C118.23,80.4,99.27,100.83,81.86,119.57,69.57,132.8,56,147.38,56,168a72,72,0,0,0,144,0C200,141.22,189.47,120.25,174.14,103.78ZM128,224a56.06,56.06,0,0,1-56-56c0-15.6,10.66-27.06,23.51-40.9,19.38-20.84,40.49-43.55,40.49-74.87,8.28,6.86,15.65,15.2,21.91,24.81C171.18,97,184,127.35,184,168A56.06,56.06,0,0,1,128,224Z"/>
+            </svg>
             THẮP NÉN TÂM HƯƠNG
           </button>
+          <a href="#mothers" class="hero-secondary-btn">
+            Xem 7 Hồ Sơ Ký Ức &darr;
+          </a>
         </div>
       </div>
     </div>
@@ -154,6 +167,107 @@
   </section>
 
   <!-- ==========================================================================
+       MANDATORY TAGLINE REVEAL SECTION (B11)
+       Words activate sequentially on scroll via IntersectionObserver
+       ========================================================================== -->
+  <section class="tagline-reveal-section" id="taglineSection" aria-label="Lời tâm niệm tri ân">
+    <div class="container-custom">
+      <div class="tagline-reveal-box">
+        <p class="tagline-reveal-text" id="taglineRevealText">
+          <span class="tagline-word">Mỗi</span>
+          <span class="tagline-word">nén</span>
+          <span class="tagline-word">tâm</span>
+          <span class="tagline-word">hương</span>
+          <span class="tagline-word">dâng</span>
+          <span class="tagline-word">lên</span>
+          <span class="tagline-word">là</span>
+          <span class="tagline-word">một</span>
+          <span class="tagline-word">lời</span>
+          <span class="tagline-word">hứa</span>
+          <span class="tagline-word">của</span>
+          <span class="tagline-word">tuổi</span>
+          <span class="tagline-word">trẻ</span>
+          <span class="tagline-word">Hưng</span>
+          <span class="tagline-word">Phú:</span>
+          <span class="tagline-word">Đời</span>
+          <span class="tagline-word">đời</span>
+          <span class="tagline-word">tạc</span>
+          <span class="tagline-word">dạ</span>
+          <span class="tagline-word">tri</span>
+          <span class="tagline-word">ân</span>
+          <span class="tagline-word">sự</span>
+          <span class="tagline-word">hy</span>
+          <span class="tagline-word">sinh</span>
+          <span class="tagline-word">vô</span>
+          <span class="tagline-word">bờ</span>
+          <span class="tagline-word">bến</span>
+          <span class="tagline-word">của</span>
+          <span class="tagline-word">các</span>
+          <span class="tagline-word">Mẹ</span>
+          <span class="tagline-word">Việt</span>
+          <span class="tagline-word">Nam</span>
+          <span class="tagline-word">Anh</span>
+          <span class="tagline-word">Hùng.</span>
+        </p>
+        <div class="tagline-source-badge">
+          Công trình thanh niên • Đoàn TNCS Hồ Chí Minh Phường Hưng Phú
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HÀNH TRÌNH TRI ÂN (HOW IT WORKS - 3 BƯỚC THAM GIA)
+       ========================================================================== -->
+  <section id="journey" class="steps-section">
+    <div class="container-custom">
+      <div class="section-head-center">
+        <span class="section-badge">Hành trình tiếp nối</span>
+        <h2 class="section-title">3 BƯỚC CÙNG THAM GIA TRI ÂN</h2>
+        <p class="section-desc">Mỗi đoàn viên và nhân dân hãy cùng góp phần gìn giữ những trang sử vàng thiêng liêng</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-badge">Bước 01</div>
+          <div class="step-icon-wrap">
+            <!-- Phosphor Flame Icon -->
+            <svg width="26" height="26" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M174.14,103.78A79.94,79.94,0,0,0,136,16a8,8,0,0,0-7.39,4.92,128.24,128.24,0,0,0-5.83,31.79C118.23,80.4,99.27,100.83,81.86,119.57,69.57,132.8,56,147.38,56,168a72,72,0,0,0,144,0C200,141.22,189.47,120.25,174.14,103.78ZM128,224a56.06,56.06,0,0,1-56-56c0-15.6,10.66-27.06,23.51-40.9,19.38-20.84,40.49-43.55,40.49-74.87,8.28,6.86,15.65,15.2,21.91,24.81C171.18,97,184,127.35,184,168A56.06,56.06,0,0,1,128,224Z"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Dâng Nén Tâm Hương</h3>
+          <p class="step-desc">Chạm thắp nén hương tưởng niệm với âm ba chuông chùa ngân trầm thanh tịnh, rung phản hồi trang nghiêm trên thiết bị.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">Bước 02</div>
+          <div class="step-icon-wrap">
+            <!-- Phosphor Medal Icon -->
+            <svg width="26" height="26" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M216,96a48,48,0,0,0-25.86-42.54l16.27-32.55A8,8,0,0,0,199.25,10L148,35.63V24a8,8,0,0,0-16,0V35.63L80.75,10a8,8,0,0,0-10.74,10.91l16.27,32.55A48,48,0,0,0,40,96c0,27.91,15.65,51.81,38.74,64.21L49.19,219.78a8,8,0,0,0,6.91,12.22H200a8,8,0,0,0,6.91-12.22l-29.55-59.57C200.35,147.81,216,123.91,216,96ZM128,128a32,32,0,1,1,32-32A32,32,0,0,1,128,128Z"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Tra Cứu Hồ Sơ Ký Ức</h3>
+          <p class="step-desc">Tìm hiểu công trạng, toàn văn Quyết định vinh danh của Chủ tịch nước, danh sách thân nhân Liệt sĩ và địa chỉ phụng dưỡng.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">Bước 03</div>
+          <div class="step-icon-wrap">
+            <!-- Phosphor Paper Plane Icon -->
+            <svg width="26" height="26" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-184,56A16,16,0,0,0,24.1,101.44l72.44,36.22,36.22,72.44a16,16,0,0,0,20.84,7.46l56-184A16,16,0,0,0,227.32,28.68ZM147.2,196.8l-30-60a8,8,0,0,0-3.6-3.6l-60-30L208,48Z"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Lưu Bút & Đóng Góp Kỷ Vật</h3>
+          <p class="step-desc">Gửi gắm tình cảm vào Sổ lưu bút số hóa hoặc gửi thêm ảnh chân dung, tư liệu quý về Mẹ qua hòm thư điện tử của Đoàn phường.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        DANH SÁCH BÀ MẸ VIỆT NAM ANH HÙNG (ĐỢT 1)
        ========================================================================== -->
   <section id="mothers" class="gallery-section">
@@ -167,19 +281,25 @@
       <!-- Contribution Callout Banner -->
       <div class="contribution-banner">
         <div class="contribution-icon-wrap">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <!-- Phosphor Envelope Icon -->
+          <svg width="24" height="24" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM208,64l-80,53.33L48,64ZM216,192H40V74.67l84.44,56.3a8,8,0,0,0,8.88,0L216,74.67V192Z"/>
+          </svg>
         </div>
         <div class="contribution-text">
           <span class="contribution-title">Tiếp nhận tư liệu & hình ảnh Đợt 2:</span>
           Đoàn TNCS Hồ Chí Minh Phường Hưng Phú trân trọng kính mời quý thân nhân gia đình, đoàn viên và nhân dân cung cấp thêm ảnh chân dung, tư liệu hoặc câu chuyện sưu tầm về các Mẹ qua hòm thư điện tử: 
-          <a href="mailto:doanphuonghungphu@gmail.com?subject=[Đóng góp tư liệu Mẹ VNAH Phường Hưng Phú]" class="contribution-mail-link">doanphuonghungphu@gmail.com</a>
+          <a href="mailto:doanphuonghungphu01072025@gmail.com?subject=[Đóng góp tư liệu Mẹ VNAH Phường Hưng Phú]" class="contribution-mail-link">doanphuonghungphu01072025@gmail.com</a>
         </div>
       </div>
 
       <!-- Search & Filter Controls -->
       <div class="filter-search-card">
         <div class="search-input-wrap">
-          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <!-- Phosphor Magnifying Glass Icon -->
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/>
+          </svg>
           <input 
             type="text" 
             id="searchMother" 
@@ -235,7 +355,10 @@
               <textarea id="guestContent" class="form-textarea" placeholder="Viết những cảm nghĩ, lòng biết ơn của bạn gửi đến các Mẹ Việt Nam Anh Hùng..." required></textarea>
             </div>
             <button type="submit" class="btn-submit-guestbook">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <!-- Phosphor Paper Plane Icon -->
+              <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-184,56A16,16,0,0,0,24.1,101.44l72.44,36.22,36.22,72.44a16,16,0,0,0,20.84,7.46l56-184A16,16,0,0,0,227.32,28.68ZM147.2,196.8l-30-60a8,8,0,0,0-3.6-3.6l-60-30L208,48Z"/>
+              </svg>
               GHI VÀO SỔ LƯU BÚT
             </button>
           </form>
@@ -253,6 +376,100 @@
       </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION: GIẢI ĐÁP NGUỒN TƯ LIỆU & HƯỚNG DẪN ĐÓNG GÓP (A2, A4)
+       ========================================================================== -->
+  <section id="faq" class="faq-section">
+    <div class="container-custom">
+      <div class="section-head-center">
+        <span class="section-badge">Minh bạch & Tra cứu</span>
+        <h2 class="section-title">CÂU HỎI THƯỜNG GẶP</h2>
+        <p class="section-desc">Thông tin xác thực về công trình số hóa và hướng dẫn đóng góp tư liệu lịch sử</p>
+      </div>
+
+      <div class="faq-accordion-wrap">
+        <!-- FAQ 1 -->
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>Các hồ sơ, hình ảnh của các Mẹ tại Phường Hưng Phú được lấy từ nguồn nào?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Toàn bộ hồ sơ danh sách, công trạng, tên thân nhân Liệt sĩ và thông tin thờ cúng/phụng dưỡng được đối chiếu chính xác 100% từ hồ sơ lưu trữ danh hiệu vinh dự Nhà nước Bà mẹ Việt Nam Anh Hùng tại địa phương và Quyết định phong tặng/truy tặng chính thức của Chủ tịch nước Cộng hòa xã hội chủ nghĩa Việt Nam.</p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Địa giới hành chính Phường Hưng Phú trên website được chuẩn hóa ra sao?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Hệ thống chuẩn hóa đồng bộ theo mô hình chính quyền địa phương 2 cấp của Thành phố Cần Thơ (Thành phố Cần Thơ &rarr; Phường Hưng Phú trực thuộc, không trung gian cấp quận) nhằm đảm bảo chuẩn xác về dữ liệu hành chính chuyển đổi số của thành phố.</p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Gia đình thân nhân muốn gửi ảnh chân dung hoặc kỷ vật về Mẹ thì làm thế nào?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Quý thân nhân có thể nhấn vào nút "Gửi tư liệu về Mẹ qua Email" trong cửa sổ tiểu sử chi tiết của từng Mẹ, hoặc gửi trực tiếp về hòm thư điện tử <strong>doanphuonghungphu01072025@gmail.com</strong>. Ban Chấp hành Đoàn phường sẽ liên hệ xác minh và cập nhật ảnh chất lượng cao vào Đợt số hóa tiếp theo.</p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Lời tri ân ghi vào Sổ lưu bút có được lưu giữ vĩnh viễn không?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Có. Hệ thống tích hợp đồng bộ tự động cơ sở dữ liệu thời gian thực trên Google Cloud Firestore và lưu trữ dự phòng LocalStorage, bảo đảm mọi dòng tâm tình tri ân đều được lưu giữ trường tồn cùng trang di sản.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FINAL CALL TO ACTION (A2 - CLOSING CONVERSION)
+       ========================================================================== -->
+  <section class="final-cta-section">
+    <div class="container-custom">
+      <div class="final-cta-card">
+        <span class="final-cta-badge">Uống nước nhớ nguồn</span>
+        <h2 class="final-cta-title">TIẾP NỐI NGỌN LỬA TRI ÂN MUÔN ĐỜI</h2>
+        <p class="final-cta-desc">
+          Hãy cùng tuổi trẻ Phường Hưng Phú lan tỏa trang ký ức thiêng liêng đến đồng bào, người thân và thế hệ mai sau.
+        </p>
+        <div class="final-cta-actions">
+          <a href="#hero" class="btn-primary-altar final-cta-btn">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M174.14,103.78A79.94,79.94,0,0,0,136,16a8,8,0,0,0-7.39,4.92,128.24,128.24,0,0,0-5.83,31.79C118.23,80.4,99.27,100.83,81.86,119.57,69.57,132.8,56,147.38,56,168a72,72,0,0,0,144,0C200,141.22,189.47,120.25,174.14,103.78ZM128,224a56.06,56.06,0,0,1-56-56c0-15.6,10.66-27.06,23.51-40.9,19.38-20.84,40.49-43.55,40.49-74.87,8.28,6.86,15.65,15.2,21.91,24.81C171.18,97,184,127.35,184,168A56.06,56.06,0,0,1,128,224Z"/>
+            </svg>
+            THẮP NÉN TÂM HƯƠNG
+          </a>
+          <a href="#guestbook" class="hero-secondary-btn">
+            Gửi Lời Tri Ân Vào Sổ Lưu Bút &darr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <!-- ==========================================================================
        FOOTER & CITATIONS (CHÍNH QUYỀN 2 CẤP THÀNH PHỐ CẦN THƠ)
@@ -279,7 +496,7 @@
           </h4>
           <p style="font-size: 0.88rem; line-height: 1.8; color: #94A3B8;">
             📍 <strong>Địa chỉ:</strong> Phường Hưng Phú, Thành phố Cần Thơ<br />
-            ✉️ <strong>Hòm thư tiếp nhận tư liệu:</strong> <a href="mailto:doanphuonghungphu@gmail.com" style="color: var(--color-gold-light); text-decoration: underline;">doanphuonghungphu01072025@gmail.com</a><br />
+            ✉️ <strong>Hòm thư tiếp nhận tư liệu:</strong> <a href="mailto:doanphuonghungphu01072025@gmail.com" style="color: var(--color-gold-light); text-decoration: underline;">doanphuonghungphu01072025@gmail.com</a><br />
             🤝 Quý thân nhân, gia đình và nhân dân có hình ảnh chân dung, tư liệu hoặc câu chuyện về các Mẹ xin vui lòng gửi về email để Ban Chấp hành Đoàn phường cập nhật các đợt tiếp theo.
           </p>
         </div>
@@ -300,7 +517,10 @@
       <div class="modal-header">
         <div class="modal-header-title">Hồ Sơ Ký Ức Chi Tiết</div>
         <button id="modalCloseBtn" class="modal-close-btn" type="button" aria-label="Đóng cửa sổ">
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+          <!-- Phosphor X Icon -->
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/>
+          </svg>
         </button>
       </div>
 
@@ -343,14 +563,20 @@
         <!-- Khung tiếp nhận đóng góp tư liệu và hình ảnh riêng từng Mẹ -->
         <div class="modal-contribution-card">
           <div class="modal-contrib-header">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <!-- Phosphor Envelope Icon -->
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM208,64l-80,53.33L48,64ZM216,192H40V74.67l84.44,56.3a8,8,0,0,0,8.88,0L216,74.67V192Z"/>
+            </svg>
             <span>Đóng góp hình ảnh & kỷ vật thiêng liêng về Mẹ</span>
           </div>
           <p class="modal-contrib-desc">
             Quý thân nhân có hình ảnh chân dung rõ nét hơn, kỷ vật hoặc thông tin chi tiết về Mẹ? Kính mời gửi về hòm thư Đoàn phường để số hóa lưu giữ:
           </p>
-          <a id="modalMailContributionBtn" href="mailto:doanphuonghungphu@gmail.com" class="btn-contrib-email" target="_blank" rel="noopener">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          <a id="modalMailContributionBtn" href="mailto:doanphuonghungphu01072025@gmail.com" class="btn-contrib-email" target="_blank" rel="noopener">
+            <!-- Phosphor Paper Plane Icon -->
+            <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-184,56A16,16,0,0,0,24.1,101.44l72.44,36.22,36.22,72.44a16,16,0,0,0,20.84,7.46l56-184A16,16,0,0,0,227.32,28.68ZM147.2,196.8l-30-60a8,8,0,0,0-3.6-3.6l-60-30L208,48Z"/>
+            </svg>
             <span>Gửi tư liệu về Mẹ qua Email</span>
           </a>
         </div>
@@ -360,7 +586,10 @@
       <div class="modal-footer">
         <button id="modalDismissBtn" class="btn-secondary" type="button">Đóng</button>
         <button id="altarThisMotherBtn" class="btn-primary-altar" type="button">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
+          <!-- Phosphor Flame Icon -->
+          <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M174.14,103.78A79.94,79.94,0,0,0,136,16a8,8,0,0,0-7.39,4.92,128.24,128.24,0,0,0-5.83,31.79C118.23,80.4,99.27,100.83,81.86,119.57,69.57,132.8,56,147.38,56,168a72,72,0,0,0,144,0C200,141.22,189.47,120.25,174.14,103.78ZM128,224a56.06,56.06,0,0,1-56-56c0-15.6,10.66-27.06,23.51-40.9,19.38-20.84,40.49-43.55,40.49-74.87,8.28,6.86,15.65,15.2,21.91,24.81C171.18,97,184,127.35,184,168A56.06,56.06,0,0,1,128,224Z"/>
+          </svg>
           Thắp hương dâng Mẹ
         </button>
       </div>

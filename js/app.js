@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 2. Khởi tạo các module
   initAudioPlayer();
   initAltarInteractions();
+  initTaglineReveal();
+  initScrollReveals();
   initMothersGallery();
   initMotherModal();
   initGuestbook();
@@ -332,7 +334,7 @@ function createMotherCardHTML(mother) {
   let mediaHTML = "";
   if (mother.has_portrait) {
     mediaHTML = `
-      <div class="card-media-box" style="background: radial-gradient(circle, #FFFBEB 0%, #FEF3C7 100%);">
+      <div class="card-media-box" style="background-color: #FEF3C7;">
         <div class="card-portrait-wrap">
           <img src="${mother.photo}" alt="Chân dung Mẹ ${mother.name}" loading="lazy" />
         </div>
@@ -361,15 +363,24 @@ function createMotherCardHTML(mother) {
 
         <div class="card-info-list">
           <div class="card-info-row">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <!-- Phosphor Map Pin -->
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/>
+            </svg>
             <div><strong>Quê quán:</strong> ${mother.hometown}</div>
           </div>
           <div class="card-info-row">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <!-- Phosphor Medal -->
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M216,96a48,48,0,0,0-25.86-42.54l16.27-32.55A8,8,0,0,0,199.25,10L148,35.63V24a8,8,0,0,0-16,0V35.63L80.75,10a8,8,0,0,0-10.74,10.91l16.27,32.55A48,48,0,0,0,40,96c0,27.91,15.65,51.81,38.74,64.21L49.19,219.78a8,8,0,0,0,6.91,12.22H200a8,8,0,0,0,6.91-12.22l-29.55-59.57C200.35,147.81,216,123.91,216,96ZM128,128a32,32,0,1,1,32-32A32,32,0,0,1,128,128Z"/>
+            </svg>
             <div><strong>Thân nhân Liệt sĩ:</strong> ${mother.relatives.map(r => `LS ${r.name} (${r.relation})`).join(", ")}</div>
           </div>
           <div class="card-info-row">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <!-- Phosphor House Line -->
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H48V117.27L128,41.8l80,75.47V208Z"/>
+            </svg>
             <div><strong>${mother.worship_type}:</strong> ${mother.worship_address}</div>
           </div>
         </div>
@@ -380,7 +391,10 @@ function createMotherCardHTML(mother) {
           Xem Hồ Sơ Ký Ức &rarr;
         </button>
         <button class="btn-altar-card" type="button" title="Thắp nén hương dâng Mẹ ${mother.name}">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
+          <!-- Phosphor Flame -->
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M174.14,103.78A79.94,79.94,0,0,0,136,16a8,8,0,0,0-7.39,4.92,128.24,128.24,0,0,0-5.83,31.79C118.23,80.4,99.27,100.83,81.86,119.57,69.57,132.8,56,147.38,56,168a72,72,0,0,0,144,0C200,141.22,189.47,120.25,174.14,103.78ZM128,224a56.06,56.06,0,0,1-56-56c0-15.6,10.66-27.06,23.51-40.9,19.38-20.84,40.49-43.55,40.49-74.87,8.28,6.86,15.65,15.2,21.91,24.81C171.18,97,184,127.35,184,168A56.06,56.06,0,0,1,128,224Z"/>
+          </svg>
           Dâng hương
         </button>
       </div>
@@ -468,7 +482,7 @@ function openMotherModal(mother) {
       `Tôi xin gửi tư liệu/hình ảnh bổ sung về Mẹ Việt Nam Anh Hùng ${mother.name} (Địa chỉ: ${mother.worship_address}).\n\n` +
       `Nội dung thông tin / Kỷ vật đính kèm:\n...`
     );
-    mailBtn.href = `mailto:doanphuonghungphu@gmail.com?subject=${subject}&body=${body}`;
+    mailBtn.href = `mailto:doanphuonghungphu01072025@gmail.com?subject=${subject}&body=${body}`;
   }
 
   modal.classList.add("active");
@@ -600,4 +614,76 @@ function showTributeToast(message) {
     toast.style.transform = "translateX(-50%) translateY(20px)";
     setTimeout(() => toast.remove(), 350);
   }, 2800);
+}
+
+/* ==========================================================================
+   MODULE 6: TAGLINE REVEAL SCROLL OBSERVER (B11 MANDATORY REQUIREMENT)
+   Words activate sequentially on scroll from 0.28 opacity to full color
+   ========================================================================== */
+function initTaglineReveal() {
+  const words = document.querySelectorAll(".tagline-word");
+  const section = document.getElementById("taglineSection");
+  if (!words.length || !section) return;
+
+  let ticking = false;
+
+  const updateWordsOnScroll = () => {
+    const rect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+    // Trigger window: starts when section top is at 80% viewport, completes at 30% viewport
+    const triggerStart = windowHeight * 0.82;
+    const triggerEnd = windowHeight * 0.26;
+    const progress = Math.min(Math.max((triggerStart - rect.top) / (triggerStart - triggerEnd), 0), 1);
+    
+    const totalWords = words.length;
+    const activeCount = Math.floor(progress * (totalWords + 1));
+
+    words.forEach((word, index) => {
+      if (index < activeCount) {
+        word.classList.add("revealed");
+      } else {
+        word.classList.remove("revealed");
+      }
+    });
+
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateWordsOnScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial update
+  updateWordsOnScroll();
+}
+
+/* ==========================================================================
+   MODULE 7: SECTION SCROLL ENTRANCE ANIMATIONS (B7 BASE CURVE)
+   ========================================================================== */
+function initScrollReveals() {
+  const targets = document.querySelectorAll(
+    ".step-card, .stat-item, .faq-item, .contribution-banner, .filter-search-card, .final-cta-card"
+  );
+  if (!targets.length || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed-in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -30px 0px"
+  });
+
+  targets.forEach((el) => {
+    el.classList.add("scroll-reveal-target");
+    observer.observe(el);
+  });
 }
